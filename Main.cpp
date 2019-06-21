@@ -11,14 +11,11 @@ namespace simple_shapes {
 	polcoor* InPolcoor(polcoor &l, ifstream &ifst);
 	Node* In(ifstream &ifst);
 	void In(container &c, ifstream &ifst);
-	Node* In(ifstream &ifst);
-	void In(container &c, ifstream &ifst);
 	void OutComplex(complex *p, ofstream &ofst);
 	void Out(container &c, ofstream &ofst);
 	void Out(Node *s, ofstream &ofst);
 	int addlist(container &c, ifstream &ifst);
 	void OutSimple(simple *t, ofstream &ofst);
-	void OutComplex(complex *p, ofstream &ofst);
 	void OutPolcoor(polcoor *l, ofstream &ofst);
 }
 using namespace simple_shapes;
