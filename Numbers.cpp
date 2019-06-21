@@ -9,6 +9,7 @@ namespace simple_shapes {
 	complex* InComplex(complex &p, ifstream &ifst);
 	simple* InSimple(simple &t, ifstream &ifst);
 	polcoor* InPolcoor(polcoor &l, ifstream &ifst);
+	numbers* In(ifstream &ifst);
 	void In(container &c, ifstream &ifst);
 	void OutComplex(complex *p, ofstream &ofst);
 	void Out(container &c, ofstream &ofst);
@@ -19,6 +20,15 @@ namespace simple_shapes {
 
 	float numbers_s(simple *t);
 	float numbers_s(complex *p);
+
+	float numbers_s(simple *t);
+	float numbers_s(complex *p);
+	bool Compare(numbers *p, numbers *t);
+	void Sort(container &c);
+	void castl(Node* &current);
+	void pocesssort(Node*& headt, Node*& current);
+
+
 	float numbers_s(simple *t)
 	{
 		float numbers1 = (t->numerator / t->denominator);
@@ -50,6 +60,68 @@ namespace simple_shapes {
 		}
 	}
 
+	bool Compare(numbers *p, numbers *t)
+	{
+		return numbers_s(p) < numbers_s(t);
+	}
+
+	void Sort(container & c)
+	{
+		Node* current;
+		current = c.Top;
+		Node* currentnext = current->Next;
+		for (int i = 1; i < c.count; i++) {
+			for (int j = 1; j < c.count; j++) {
+				if (Compare(current->data, current->Next->data)) {
+					pocesssort(c.Top, current);
+				}
+				else
+					current = current->Next;
+			}
+			current = c.Top;
+		}
+	}
+	void castl(Node* &current)
+	{
+		Node* currentnext = current->Next;//Создаем копии, для смены местами
+		Node* q1 = current;
+		Node* q2 = currentnext;
+		current = q2;
+		currentnext = q1;
+		currentnext->Next = current->Next;
+		current->Next = currentnext;
+		current->Prev = currentnext->Prev;
+		currentnext->Prev = current;
+		currentnext = current->Next;
+		currentnext->Next->Prev = currentnext;
+		current->Prev->Next = current;
+	}
+	void pocesssort(Node *& headt, Node *& current)
+	{
+		Node* currentnext = current->Next;
+		if (current == headt)//определяем указывает ли на голову
+		{
+			if (current->Next->Next == current)
+			{
+				headt = current->Next;
+			}
+			else
+			{
+				castl(current);
+				headt = current;
+			}
+		}
+		else
+		{
+			if (current->Next->Next == current)
+			{
+				headt = current->Next;
+			}
+			else
+				castl(current);
+		}
+	}
+
 	complex * InComplex(complex & p, ifstream & ifst)
 	{
 		ifst >> p.real >> p.imaginary;
@@ -62,12 +134,12 @@ namespace simple_shapes {
 		return &t;
 	}
 
-
 	polcoor * InPolcoor(polcoor & l, ifstream &ifst)
 	{
 		ifst >> l.corner >> l.distance;
 		return &l;
 	}
+
 
 	void Init(container & c)
 	{
@@ -180,6 +252,7 @@ namespace simple_shapes {
 			<< ", расстояние до точки = " << l->distance << endl << "(" << l->distance << "," << l->corner << "°)";
 	}
 
+
 	void In(container &c, ifstream &ifst)
 
 	{
@@ -206,6 +279,7 @@ namespace simple_shapes {
 			s->key = SIMPLE;
 			return s;
 		}
+
 		else if (key == 3)
 		{
 			polcoor* l = new polcoor;

@@ -26,6 +26,10 @@ struct polcoor {
 
 struct numbers {
 	type key;
+	float numerator;
+	float denominator;
+	float real;
+	float imaginary;
 };
 
 struct Node {
@@ -42,3 +46,4 @@ struct container {
 	Node* Top;
 	int count;
 };
+
