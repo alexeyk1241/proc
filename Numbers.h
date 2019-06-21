@@ -32,6 +32,7 @@ struct numbers {
 	float imaginary;
 };
 
+
 struct Node {
 	Node() {
 		this->Next = nullptr;
@@ -45,5 +46,5 @@ struct Node {
 struct container {
 	Node* Top;
 	int count;
-};
 
+};

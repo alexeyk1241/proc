@@ -17,6 +17,7 @@ namespace simple_shapes {
 	int addlist(container &c, ifstream &ifst);
 	void OutSimple(simple *t, ofstream &ofst);
 	void OutPolcoor(polcoor *l, ofstream &ofst);
+	void Out_only_complex(container &c, ofstream &ofst);
 }
 using namespace simple_shapes;
 int main(int argc, char* argv[])
@@ -37,7 +38,8 @@ int main(int argc, char* argv[])
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
 
-	Out(c, ofst);
+	Out_only_complex(c, ofst);
+
 	Clear(c);
 	ofst << "Empty container. " << endl;
 	Out(c, ofst);
