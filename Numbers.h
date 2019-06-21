@@ -1,6 +1,8 @@
+
 #include <fstream>
 
 enum type { COMPLEX, SIMPLE, POLCOOR };
+
 struct complex {
 	type key;
 	float real;
@@ -34,4 +36,5 @@ struct Node {
 struct container {
 	Node* Top;
 	int count;
+
 };
