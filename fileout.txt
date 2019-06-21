@@ -1,12 +1,16 @@
 Filled container. 
  Container contains 4 elements.
-0: It is Simple number: числитель = 12, знаменатель = 18
-12/18
-1: It is Simple number: числитель = 24, знаменатель = 5
-24/5
-2: It is Complex number: действительная часть = 12, мнимая часть = 169
-12+169i
-3: It is Complex number: действительная часть = 12, мнимая часть = -169
-12-169i
+0: It is Complex number: действительная часть = 4, мнимая часть = 5
+4+5i
+значение = 6.40312
+1: It is Complex number: действительная часть = 2, мнимая часть = 6
+2+6i
+значение = 6.32456
+2: It is Simple number: числитель = 12, знаменатель = 3
+12/3
+значение = 4
+3: It is Simple number: числитель = 123, знаменатель = 32
+123/32
+значение = 3.84375
 Empty container. 
  Container contains 0 elements.
