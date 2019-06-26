@@ -90,7 +90,7 @@ namespace simple_shapes {
 		}
 	}
 
-	bool Compare(numbers* first, numbers* second) 
+	bool Compare(numbers* first, numbers* second)
 	{
 		return numbers_s(first) < numbers_s(second);
 	}
