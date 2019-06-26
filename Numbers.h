@@ -1,18 +1,37 @@
-enum type { COMPLEX, SIMPLE };
+#include <fstream>
+
+enum type { COMPLEX, SIMPLE, POLCOOR };
+
 struct complex {
+
 	type key;
+	char units[100];
 	float real;
 	float imaginary;
 };
 struct simple {
 
 	type key;
+	char units[100]
 	int numerator;
 	int denominator;
 };
+struct polcoor {
+
+	type key;
+	char units[100]
+	float corner;
+	int distance;
+};
+
 struct numbers {
 	type key;
+	float numerator;
+	float denominator;
+	float real;
+	float imaginary;
 };
+
 
 struct Node {
 	Node() {
@@ -27,4 +46,5 @@ struct Node {
 struct container {
 	Node* Top;
 	int count;
+
 };

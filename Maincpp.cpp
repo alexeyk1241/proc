@@ -8,7 +8,6 @@ namespace simple_shapes {
 	void Clear(container &c);
 	complex* InComplex(complex &p, ifstream &ifst);
 	simple* InSimple(simple &t, ifstream &ifst);
-	polcoor* InPolcoor(polcoor &l, ifstream &ifst);
 	Node* In(ifstream &ifst);
 	void In(container &c, ifstream &ifst);
 	void OutComplex(complex *p, ofstream &ofst);
@@ -16,8 +15,11 @@ namespace simple_shapes {
 	void Out(Node *s, ofstream &ofst);
 	int addlist(container &c, ifstream &ifst);
 	void OutSimple(simple *t, ofstream &ofst);
-	void OutPolcoor(polcoor *l, ofstream &ofst);
-	void Out_only_complex(container &c, ofstream &ofst);
+
+	float numbers_s(numbers *s);
+	bool Compare(numbers *p, numbers *t);
+	void Sort(container &c);
+
 }
 using namespace simple_shapes;
 int main(int argc, char* argv[])
@@ -38,8 +40,9 @@ int main(int argc, char* argv[])
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
 
-	Out_only_complex(c, ofst);
+	Sort(c);
 
+	Out(c, ofst);
 	Clear(c);
 	ofst << "Empty container. " << endl;
 	Out(c, ofst);
