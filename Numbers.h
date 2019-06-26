@@ -1,23 +1,14 @@
-
-enum type { COMPLEX, SIMPLE, POLCOOR };
+enum type { COMPLEX, SIMPLE };
 struct complex {
 	type key;
-	char units[100];
 	float real;
 	float imaginary;
 };
 struct simple {
 
 	type key;
-	char units[100];
-	float numerator;
-	float denominator;
-};
-struct polcoor {
-	type key;
-	char units[100];
-	float corner;
-	int distance;
+	int numerator;
+	int denominator;
 };
 struct numbers {
 	type key;

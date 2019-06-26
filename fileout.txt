@@ -1,55 +1,44 @@
 Filled container. 
- Container contains 6 elements.
+ Container contains 4 elements.
 0: It is Simple number: числитель = 12, знаменатель = 18
-12/18, еденица измерений - см
-значение = 0.666667
+12/18
 1: It is Simple number: числитель = 24, знаменатель = 5
-24/5, еденица измерений - мм
-значение = 4.8
+24/5
 2: It is Complex number: действительная часть = 12, мнимая часть = 169
-12+169i, еденица измерений - м
-значение = 169.426
+12+169i
 3: It is Complex number: действительная часть = 12, мнимая часть = -169
-12-169i, еденица измерений - дм
-значение = 169.426
-4: It is Polar coordinates number: угол = 12, расстояние до точки = 49
-(49,12°), еденица измерений - мм
-значение = 15.0568
-5: It is Polar coordinates number: угол = 4, расстояние до точки = 44
-(44,4°), еденица измерений - мм
-значение = -62.0596
+12-169i
 
- Container contains 6 elements.
-0: It is Complex number: действительная часть = 12, мнимая часть = 169
-12+169i, еденица измерений - м
-значение = 169.426
-1: It is Complex number: действительная часть = 12, мнимая часть = -169
-12-169i, еденица измерений - дм
-значение = 169.426
-2: It is Polar coordinates number: угол = 12, расстояние до точки = 49
-(49,12°), еденица измерений - мм
-значение = 15.0568
-3: It is Simple number: числитель = 24, знаменатель = 5
-24/5, еденица измерений - мм
-значение = 4.8
-4: It is Simple number: числитель = 12, знаменатель = 18
-12/18, еденица измерений - см
-значение = 0.666667
-5: It is Polar coordinates number: угол = 4, расстояние до точки = 44
-(44,4°), еденица измерений - мм
-значение = -62.0596
-
-Only complex.
-0: It is Complex number: действительная часть = 12, мнимая часть = 169
-12+169i, еденица измерений - м
-значение = 169.426
-1: It is Complex number: действительная часть = 12, мнимая часть = -169
-12-169i, еденица измерений - дм
-значение = 169.426
-2: 
-3: 
-4: 
-5: 
-
+Multimethod.
+Simple and Simple
+It is Simple number: числитель = 12, знаменатель = 18
+12/18
+It is Simple number: числитель = 24, знаменатель = 5
+24/5
+Simple and Complex.
+It is Simple number: числитель = 12, знаменатель = 18
+12/18
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i
+Simple and Complex.
+It is Simple number: числитель = 12, знаменатель = 18
+12/18
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i
+Simple and Complex.
+It is Simple number: числитель = 24, знаменатель = 5
+24/5
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i
+Simple and Complex.
+It is Simple number: числитель = 24, знаменатель = 5
+24/5
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i
+Complex and Complex.
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i
 Empty container. 
  Container contains 0 elements.
