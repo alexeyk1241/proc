@@ -13,11 +13,88 @@ Filled container.
 12-169i, еденица измерений - дм
 значение = 169.426
 4: It is Polar coordinates number: угол = 12, расстояние до точки = 49
-(49,12°), еденица измерений - мм
+(49,12°), еденица измерений - м
 значение = 15.0568
 5: It is Polar coordinates number: угол = 4, расстояние до точки = 44
-(44,4°), еденица измерений - мм
+(44,4°), еденица измерений - м
 значение = -62.0596
+
+Multimethod.
+Simple and Simple
+It is Simple number: числитель = 12, знаменатель = 18
+12/18, еденица измерений - см
+It is Simple number: числитель = 24, знаменатель = 5
+24/5, еденица измерений - мм
+Simple and Complex.
+It is Simple number: числитель = 12, знаменатель = 18
+12/18, еденица измерений - см
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i, еденица измерений - м
+Simple and Complex.
+It is Simple number: числитель = 12, знаменатель = 18
+12/18, еденица измерений - см
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i, еденица измерений - дм
+Simple and Polcoor
+It is Simple number: числитель = 12, знаменатель = 18
+12/18, еденица измерений - см
+It is Polar coordinates number: угол = 12, расстояние до точки = 49
+(49,12°), еденица измерений - м
+Simple and Polcoor
+It is Simple number: числитель = 12, знаменатель = 18
+12/18, еденица измерений - см
+It is Polar coordinates number: угол = 4, расстояние до точки = 44
+(44,4°), еденица измерений - м
+Simple and Complex.
+It is Simple number: числитель = 24, знаменатель = 5
+24/5, еденица измерений - мм
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i, еденица измерений - м
+Simple and Complex.
+It is Simple number: числитель = 24, знаменатель = 5
+24/5, еденица измерений - мм
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i, еденица измерений - дм
+Simple and Polcoor
+It is Simple number: числитель = 24, знаменатель = 5
+24/5, еденица измерений - мм
+It is Polar coordinates number: угол = 12, расстояние до точки = 49
+(49,12°), еденица измерений - м
+Simple and Polcoor
+It is Simple number: числитель = 24, знаменатель = 5
+24/5, еденица измерений - мм
+It is Polar coordinates number: угол = 4, расстояние до точки = 44
+(44,4°), еденица измерений - м
+Complex and Complex.
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i, еденица измерений - м
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i, еденица измерений - дм
+Complex and Polcoor
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i, еденица измерений - м
+It is Polar coordinates number: угол = 12, расстояние до точки = 49
+(49,12°), еденица измерений - м
+Complex and Polcoor
+It is Complex number: действительная часть = 12, мнимая часть = 169
+12+169i, еденица измерений - м
+It is Polar coordinates number: угол = 4, расстояние до точки = 44
+(44,4°), еденица измерений - м
+Complex and Polcoor
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i, еденица измерений - дм
+It is Polar coordinates number: угол = 12, расстояние до точки = 49
+(49,12°), еденица измерений - м
+Complex and Polcoor
+It is Complex number: действительная часть = 12, мнимая часть = -169
+12-169i, еденица измерений - дм
+It is Polar coordinates number: угол = 4, расстояние до точки = 44
+(44,4°), еденица измерений - м
+Polcoor and Polcoor
+It is Polar coordinates number: угол = 12, расстояние до точки = 49
+(49,12°), еденица измерений - м
+It is Polar coordinates number: угол = 4, расстояние до точки = 44
+(44,4°), еденица измерений - м
 
  Container contains 6 elements.
 0: It is Complex number: действительная часть = 12, мнимая часть = 169
@@ -27,7 +104,7 @@ Filled container.
 12-169i, еденица измерений - дм
 значение = 169.426
 2: It is Polar coordinates number: угол = 12, расстояние до точки = 49
-(49,12°), еденица измерений - мм
+(49,12°), еденица измерений - м
 значение = 15.0568
 3: It is Simple number: числитель = 24, знаменатель = 5
 24/5, еденица измерений - мм
@@ -36,7 +113,7 @@ Filled container.
 12/18, еденица измерений - см
 значение = 0.666667
 5: It is Polar coordinates number: угол = 4, расстояние до точки = 44
-(44,4°), еденица измерений - мм
+(44,4°), еденица измерений - м
 значение = -62.0596
 
 Only complex.

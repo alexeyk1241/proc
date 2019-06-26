@@ -20,6 +20,7 @@ namespace simple_shapes {
 	bool Compare(numbers *p, numbers *t);
 	void Sort(container &c);
 	void Out_only_complex(container &c, ofstream &ofst);
+	void MultiMethod(container &c, ofstream &ofst);
 }
 using namespace simple_shapes;
 int main(int argc, char* argv[])
@@ -50,6 +51,8 @@ int main(int argc, char* argv[])
 	ofst << "Filled container. " << endl;
 
 	Out(c, ofst);
+	ofst << endl;
+	MultiMethod(c, ofst);
 	Sort(c);
 	ofst << endl;
 	Out(c, ofst);

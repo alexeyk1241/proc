@@ -22,9 +22,71 @@ namespace simple_shapes {
 	float numbers_s(complex *p);
 	bool Compare(numbers *p, numbers *t);
 	void Sort(container &c);
-	void castl(Node* &current);
-	void pocesssort(Node*& headt, Node*& current);
 	void Out_only_complex(container &c, ofstream &ofst);
+
+	void MultiMethod(container &c, ofstream &ofst) {
+		ofst << "Multimethod." << endl;
+		Node* current_i = c.Top;
+		for (int i = 0; i < c.count; i++) {
+			Node* current_j = current_i->Next;
+			for (int j = i + 1; j < c.count; j++) {
+				switch (current_i->data->key) {
+				case COMPLEX:
+					switch (current_j->data->key) {
+					case COMPLEX:
+						ofst << "Complex and Complex." << endl;
+						break;
+					case SIMPLE:
+						ofst << "Complex and Simple" << endl;
+						break;
+					case POLCOOR:
+						ofst << "Complex and Polcoor" << endl;
+						break;
+					default:
+						ofst << "Unknown type" << endl;
+					}
+					break;
+				case SIMPLE:
+					switch (current_j->data->key) {
+					case COMPLEX:
+						ofst << "Simple and Complex." << endl;
+						break;
+					case SIMPLE:
+						ofst << "Simple and Simple" << endl;
+						break;
+					case POLCOOR:
+						ofst << "Simple and Polcoor" << endl;
+						break;
+					default:
+						ofst << "Unknown type" << endl;
+					}
+					break;
+				case POLCOOR:
+					switch (current_j->data->key) {
+					case COMPLEX:
+						ofst << "Polcoor and Complex." << endl;
+						break;
+					case SIMPLE:
+						ofst << "Polcoor and Simple" << endl;
+						break;
+					case POLCOOR:
+						ofst << "Polcoor and Polcoor" << endl;
+						break;
+					default:
+						ofst << "Unknown type" << endl;
+					}
+					break;
+				default:
+					ofst << "Unknown type" << endl;
+				}
+				Out(current_i->data, ofst);
+				Out(current_j->data, ofst);
+				current_j = current_j->Next;
+
+			}
+			current_i = current_i->Next;
+		}
+	}
 
 	float numbers_s(simple *t)
 	{
@@ -291,7 +353,7 @@ namespace simple_shapes {
 		numbers *s = new numbers;
 		int key;
 		ifst >> key;
- 		if (key != 1 && key != 2 && key != 3)
+		if (key != 1 && key != 2 && key != 3)
 		{
 			cout << "Wrong key!" << endl;
 			system("pause");
