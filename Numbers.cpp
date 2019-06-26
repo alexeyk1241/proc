@@ -122,18 +122,45 @@ namespace simple_shapes {
 	complex * InComplex(complex & p, ifstream & ifst)
 	{
 		ifst >> p.real >> p.imaginary >> p.units;;
+
+		if (ifst.fail())
+		{
+			cout << "Wrong input complex!" << endl;
+			system("pause");
+			exit(1);
+			return 0;
+		}
+
 		return &p;
 	}
 
 	simple * InSimple(simple & t, ifstream &ifst)
 	{
-		ifst >> t.numerator >> t.denominator >> t.units;;
+		ifst >> t.numerator >> t.denominator >> t.units;
+
+		if (ifst.fail())
+		{
+			cout << "Wrong input simple!" << endl;
+			system("pause");
+			exit(1);
+			return 0;
+		}
+
 		return &t;
 	}
 
 	polcoor * InPolcoor(polcoor & l, ifstream &ifst)
 	{
-		ifst >> l.corner >> l.distance;
+		ifst >> l.corner >> l.distance >> l.units;
+
+		if (ifst.fail())
+		{
+			cout << "Wrong input polcoor!" << endl;
+			system("pause");
+			exit(1);
+			return 0;
+		}
+
 		return &l;
 	}
 
@@ -247,7 +274,7 @@ namespace simple_shapes {
 	void OutPolcoor(polcoor * l, ofstream &ofst)
 	{
 		ofst << "It is Polar coordinates number: угол = " << l->corner
-			<< ", расстояние до точки = " << l->distance << endl << "(" << l->distance << "," << l->corner << "°)";
+			<< ", расстояние до точки = " << l->distance << endl << "(" << l->distance << "," << l->corner << "°)" << ", еденица измерений - " << l->units;;
 	}
 
 	void In(container &c, ifstream &ifst)
@@ -264,26 +291,36 @@ namespace simple_shapes {
 		numbers *s = new numbers;
 		int key;
 		ifst >> key;
-		if (key == 1) {
-			complex* p = new complex;
-			s = (numbers*)InComplex(*p, ifst);
-			s->key = COMPLEX;
-			return s;
-		}
-		else if (key == 2)
+ 		if (key != 1 && key != 2 && key != 3)
 		{
-			simple* t = new simple;
-			s = (numbers*)InSimple(*t, ifst);
-			s->key = SIMPLE;
-			return s;
+			cout << "Wrong key!" << endl;
+			system("pause");
+			exit(1);
+			return 0;
 		}
-		else if (key == 3)
+		else
 		{
-			polcoor* l = new polcoor;
-			s = (numbers*)InPolcoor(*l, ifst);
-			s->key = POLCOOR;
-			return s;
+			if (key == 1) {
+				complex* p = new complex;
+				s = (numbers*)InComplex(*p, ifst);
+				s->key = COMPLEX;
+				return s;
+			}
+			else if (key == 2)
+			{
+				simple* t = new simple;
+				s = (numbers*)InSimple(*t, ifst);
+				s->key = SIMPLE;
+				return s;
+			}
+			else if (key == 3)
+			{
+				polcoor* l = new polcoor;
+				s = (numbers*)InPolcoor(*l, ifst);
+				s->key = POLCOOR;
+				return s;
+			}
+			return 0;
 		}
-		return 0;
 	}
 }

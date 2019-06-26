@@ -15,6 +15,7 @@ struct simple {
 };
 struct polcoor {
 	type key;
+	char units[100];
 	float corner;
 	int distance;
 };
